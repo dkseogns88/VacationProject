@@ -1,19 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <SFML/Graphics.hpp>
-
+#include<vector>
+#include<iostream>
 using namespace sf;
+using namespace std;
 int main()
 {
 	sf::RenderWindow window(sf::VideoMode(500, 500), "WINDOW");
 	window.setFramerateLimit(60);
-	IntRect txsq(0,0,319/3,424/4); //이미지를 자름
-	// 319 X 424 이미지의 사이즈 
-	Texture tx; // 이미지를 불러옴
-	tx.loadFromFile("Texture/dragonFrames.png");
 	
-	Sprite sp(tx,txsq); //Texture 을불러와서 움직임을 구현함
-	sp.setScale(3.f, 3.f);
+	vector<Texture> txvector;
 
-	Clock clock; //시간
+	Texture tx;
+	char name[50];
+
+	for (int i = 32; i < 36; ++i)
+	{
+		sprintf(name, "Texture/cookie0020x2/cookie0020x2_00%d.png", i);
+		tx.loadFromFile(name);
+		txvector.push_back(tx); //순서대로 리스트안에 자료를 집어넣어줌
+	}
+	Sprite sp;
+
+	Clock clock;
+	size_t keyFrameTime = 0;
 
 	while (window.isOpen())//윈도우가 오픈되어있을때
 	{
@@ -33,18 +43,14 @@ int main()
 				break;
 			}
 		}
-		if (clock.getElapsedTime().asSeconds() >= 0.3f) //실행하다가 0.3초가지나면 if문실행
+		
+		if (clock.getElapsedTime().asSeconds() > 0.2f)
 		{
-			if (txsq.left >= 212)
-			{
-				txsq.left = 0;
-			}
-			else
-			{
-				txsq.left += 319 / 3;
-			}
-			sp.setTextureRect(txsq);
-			clock.restart(); // 0부터다시시작
+			
+			sp.setTexture(txvector.data()[++keyFrameTime % txvector.size()]);
+
+			keyFrameTime++;
+			clock.restart();
 		}
 		window.draw(sp);
 		window.display(); //그린결과물을 화면으로출력 
