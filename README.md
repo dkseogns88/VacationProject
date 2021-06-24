@@ -1,5 +1,5 @@
 ## 여름방학 게임개발 프로젝트
-* VacationProject
+
 
 
 ## 개요
