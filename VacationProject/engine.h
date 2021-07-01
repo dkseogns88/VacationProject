@@ -29,7 +29,7 @@ private:
 	Clock timer;
 	float deltaTime = 0.f;
 
-	AnimationObject* obj = nullptr;
+	vector<AnimationObject*> obj;
 	
 	
 	
