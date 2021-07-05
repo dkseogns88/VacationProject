@@ -16,14 +16,38 @@
     <Filter Include="소스 파일\00.engine">
       <UniqueIdentifier>{662e268b-36a2-40fa-a485-0bd289eb365f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\01.object">
+    <Filter Include="소스 파일\02.Scene">
+      <UniqueIdentifier>{2c53aff1-4b8e-48b6-bf26-c8e504207a18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.object">
       <UniqueIdentifier>{5d1952dc-9e0f-4a48-bb0c-6d7afa264d5a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\01.object\00.object">
+    <Filter Include="소스 파일\03.object\00.object">
       <UniqueIdentifier>{d96c9271-1c50-4c77-9745-590b9d58af6c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\01.object\01.AnimationObject">
+    <Filter Include="소스 파일\03.object\01.AnimationObject">
       <UniqueIdentifier>{e98520d5-f41f-4cac-a3a8-3080e0bc2c87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.object\01.AnimationObject\00.AnimationObject">
+      <UniqueIdentifier>{8175fb4a-9512-4b86-8499-d5e3d07312bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.object\01.AnimationObject\01. Character">
+      <UniqueIdentifier>{c2030879-3811-4ddd-88d8-13e387330f72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.object\01.AnimationObject\02.Effect">
+      <UniqueIdentifier>{0f84b53d-afcd-4c6b-b62d-c7b3bc6a9a34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\02.Scene\CharacterScene">
+      <UniqueIdentifier>{ab452eaa-9112-4623-af06-76d5c6cf3608}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\02.Scene\EffectScene">
+      <UniqueIdentifier>{d0b5d93e-2dcb-4338-b506-e9f3dcff07b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.object\01.AnimationObject\02.Effect\00.Effect">
+      <UniqueIdentifier>{c50e35d1-487d-466d-b3ba-d81141947e93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.object\01.AnimationObject\02.Effect\attackeffect">
+      <UniqueIdentifier>{55f76a2c-4385-4ad2-9360-f8117b9fd632}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -34,10 +58,28 @@
       <Filter>소스 파일\00.engine</Filter>
     </ClCompile>
     <ClCompile Include="Object.cpp">
-      <Filter>소스 파일\01.object\00.object</Filter>
+      <Filter>소스 파일\03.object\00.object</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>소스 파일\02.Scene</Filter>
     </ClCompile>
     <ClCompile Include="AnimationObject.cpp">
-      <Filter>소스 파일\01.object\01.AnimationObject</Filter>
+      <Filter>소스 파일\03.object\01.AnimationObject\00.AnimationObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>소스 파일\03.object\01.AnimationObject\01. Character</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterScene.cpp">
+      <Filter>소스 파일\02.Scene\CharacterScene</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectScene.cpp">
+      <Filter>소스 파일\02.Scene\EffectScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Effect.cpp">
+      <Filter>소스 파일\03.object\01.AnimationObject\02.Effect\00.Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="attackeffect.cpp">
+      <Filter>소스 파일\03.object\01.AnimationObject\02.Effect\attackeffect</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -48,10 +90,28 @@
       <Filter>소스 파일\00.engine</Filter>
     </ClInclude>
     <ClInclude Include="Object.h">
-      <Filter>소스 파일\01.object\00.object</Filter>
+      <Filter>소스 파일\03.object\00.object</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>소스 파일\02.Scene</Filter>
     </ClInclude>
     <ClInclude Include="AnimationObject.h">
-      <Filter>소스 파일\01.object\01.AnimationObject</Filter>
+      <Filter>소스 파일\03.object\01.AnimationObject\00.AnimationObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>소스 파일\03.object\01.AnimationObject\01. Character</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterScene.h">
+      <Filter>소스 파일\02.Scene\CharacterScene</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectScene.h">
+      <Filter>소스 파일\02.Scene\EffectScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Effect.h">
+      <Filter>소스 파일\03.object\01.AnimationObject\02.Effect\00.Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="attackeffect.h">
+      <Filter>소스 파일\03.object\01.AnimationObject\02.Effect\attackeffect</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

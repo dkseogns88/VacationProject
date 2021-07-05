@@ -1,9 +1,7 @@
 #pragma once
-//전방선언  :헤더파일 꼬임방지
-class AnimationObject;
 #include "framework.h"
-#include "engine.h"
-#include "AnimationObject.h"
+//전방선언  :헤더파일 꼬임방지
+class Scene;
 
 
 //게임 전체를 이루는 클래스
@@ -29,7 +27,7 @@ private:
 	Clock timer;
 	float deltaTime = 0.f;
 
-	vector<AnimationObject*> obj;
+	stack<Scene*> scenes;
 	
 	
 	

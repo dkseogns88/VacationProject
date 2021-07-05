@@ -1,6 +1,7 @@
 #include "framework.h"
 #include "engine.h"
-#include "AnimationObject.h"
+#include "EffectScene.h"
+#include "CharacterScene.h"
 
 Engine::Engine()
 {
@@ -20,11 +21,8 @@ void Engine::Init()
 	Image icon;
 	icon.loadFromFile("Texture/OW.png");
 	window->setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
+	this->scenes.push(new Scene);
 
-	AnimationObject* obj1 = new AnimationObject;
-	obj.push_back(new AnimationObject);
-	obj1->setPosition(100, 0);
-	obj.push_back(obj1);
 }
 
 void Engine::Destroy()
@@ -33,6 +31,7 @@ void Engine::Destroy()
 	{
 		delete window;
 	}
+	
 }
 
 
@@ -64,7 +63,18 @@ void Engine::Input()
 				cout << "butten A\n";
 				break;
 			}
+			case Keyboard::S:
+			{
+				this->scenes.push(new EffectScene);
+				cout << "now scene:effectScene";
+				break;
 
+			}
+			case Keyboard::Q:
+			{
+				scenes.top()->EndScene();
+				break;
+			}
 			}
 		default:
 			break;
@@ -95,15 +105,25 @@ void Engine::Input()
 
 void Engine::Update()
 {
-	
 	deltaTime = timer.getElapsedTime().asSeconds();
-	//cout << deltaTime << endl;
-	for (auto& o : obj)
-	{
-		o->Update(deltaTime);
-	}
 	timer.restart();
 	Input();
+	if (!scenes.empty()) //씬이 비어있지않을때
+	{
+		scenes.top()->Update(deltaTime);
+
+		if (this->scenes.top()->GetQuit())
+		{
+			//현재 실행중인 씬 종료
+			delete this->scenes.top();
+			this->scenes.pop();
+			cout << "Pop scene\n";
+		}
+	}
+	else
+	{
+		window->close();
+	}
 }
 
 void Engine::Render()
@@ -112,9 +132,9 @@ void Engine::Render()
 	{
 		window->clear();
 		Update();
-		for (auto& o : obj)
+		if (!scenes.empty()) //씬이 비어있지않을때
 		{
-			window->draw(*o);
+			scenes.top()->Render(window);
 		}
 		window->display();
 	}
