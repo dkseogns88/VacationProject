@@ -6,7 +6,7 @@ CharacterScene::CharacterScene()
 	Init();
 }
 
-CharacterScene::CharacterScene(stack<Scene*>* scenes)
+CharacterScene::CharacterScene(stack<Scene*>* scenes, RenderWindow* window) :Scene(scenes, window)
 {
 	Init();
 }

@@ -26,7 +26,8 @@ void attackeffect::Init()
 	}
 
 	this->setOrigin(tx->getSize().x / 2.f, tx->getSize().y / 2.f);
-	setPosition(Vector2f(180.f, 250.f));
+	setPosition(Vector2f(140.f, 140.f));
+	setScale(Vector2f(0.5, 0.5));
 }
 
 void attackeffect::Destroy()

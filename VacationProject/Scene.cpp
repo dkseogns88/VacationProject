@@ -2,13 +2,13 @@
 #include "Scene.h"
 #include "Object.h"
 #include "Character.h"
-
+#include "login.h"
 Scene::Scene()
 {
 	Init();
 }
 
-Scene::Scene(stack<Scene*>* scenes)
+Scene::Scene(stack<Scene*>* scenes,RenderWindow* window)
 	:scenes(scenes)
 {
 	Init();
@@ -19,7 +19,7 @@ Scene::~Scene()
 
 void Scene::Init()
 {
-	vObjects.push_back(new Character);
+	vObjects.push_back(new login);
 	
 }
 bool Scene::GetQuit() const
@@ -34,6 +34,7 @@ void Scene::EndScene()
 
 void Scene::Update(const float& deltaTime)
 {
+	
 	for (auto& obj : vObjects)
 	{
 		obj->Update(deltaTime);

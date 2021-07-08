@@ -7,7 +7,7 @@ class CharacterScene :
 {
 public:
 	CharacterScene();
-	CharacterScene(stack<Scene*>* scenes);
+	CharacterScene(stack<Scene*>* scenes, RenderWindow* window);
 	virtual ~CharacterScene();
 
 private:

@@ -148,7 +148,10 @@
     <ClCompile Include="CharacterScene.cpp" />
     <ClCompile Include="Effect.cpp" />
     <ClCompile Include="EffectScene.cpp" />
+    <ClCompile Include="EndingScene.cpp" />
     <ClCompile Include="engine.cpp" />
+    <ClCompile Include="login.cpp" />
+    <ClCompile Include="LoginScene.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="Scene.cpp" />
@@ -160,8 +163,11 @@
     <ClInclude Include="CharacterScene.h" />
     <ClInclude Include="Effect.h" />
     <ClInclude Include="EffectScene.h" />
+    <ClInclude Include="EndingScene.h" />
     <ClInclude Include="engine.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="login.h" />
+    <ClInclude Include="LoginScene.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Scene.h" />
   </ItemGroup>

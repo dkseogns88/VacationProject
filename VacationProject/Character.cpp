@@ -26,6 +26,7 @@ void Character::Init()
 	}
 
 	setPosition(Vector2f(100.f, 100.f));
+	setScale(Vector2f(0.5, 0.5));
 }
 
 void Character::Destroy()

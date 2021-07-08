@@ -6,7 +6,7 @@ EffectScene::EffectScene()
 	Init();
 }
 
-EffectScene::EffectScene(stack<Scene*>* scenes)
+EffectScene::EffectScene(stack<Scene*>* scenes, RenderWindow* window) :Scene(scenes, window)
 {
 	Init();
 }

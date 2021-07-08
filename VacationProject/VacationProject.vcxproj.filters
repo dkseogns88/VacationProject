@@ -49,6 +49,12 @@
     <Filter Include="소스 파일\03.object\01.AnimationObject\02.Effect\attackeffect">
       <UniqueIdentifier>{55f76a2c-4385-4ad2-9360-f8117b9fd632}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\02.Scene\loginScene">
+      <UniqueIdentifier>{6842d8e6-3e7d-4b72-ba98-e2c101b17d12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\02.Scene\EndingScene">
+      <UniqueIdentifier>{29a35acd-e268-4fa7-9621-685485ef75bb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -81,6 +87,15 @@
     <ClCompile Include="attackeffect.cpp">
       <Filter>소스 파일\03.object\01.AnimationObject\02.Effect\attackeffect</Filter>
     </ClCompile>
+    <ClCompile Include="login.cpp">
+      <Filter>소스 파일\02.Scene\loginScene</Filter>
+    </ClCompile>
+    <ClCompile Include="EndingScene.cpp">
+      <Filter>소스 파일\02.Scene\EndingScene</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginScene.cpp">
+      <Filter>소스 파일\02.Scene\loginScene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -112,6 +127,15 @@
     </ClInclude>
     <ClInclude Include="attackeffect.h">
       <Filter>소스 파일\03.object\01.AnimationObject\02.Effect\attackeffect</Filter>
+    </ClInclude>
+    <ClInclude Include="login.h">
+      <Filter>소스 파일\02.Scene\loginScene</Filter>
+    </ClInclude>
+    <ClInclude Include="EndingScene.h">
+      <Filter>소스 파일\02.Scene\EndingScene</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginScene.h">
+      <Filter>소스 파일\02.Scene\loginScene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

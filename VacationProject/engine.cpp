@@ -2,7 +2,7 @@
 #include "engine.h"
 #include "EffectScene.h"
 #include "CharacterScene.h"
-
+#include "LoginScene.h"
 Engine::Engine()
 {
 	Init();
@@ -19,10 +19,11 @@ void Engine::Init()
 	//window.set뭐시기 기능 잘활용할것
 	window->setMouseCursorVisible(true);
 	Image icon;
-	icon.loadFromFile("Texture/OW.png");
+	icon.loadFromFile("Texture/icon.png");
 	window->setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
-	this->scenes.push(new Scene);
-
+	this->scenes.push(new LoginScene(&scenes,window));
+	
+	
 }
 
 void Engine::Destroy()
@@ -38,6 +39,7 @@ void Engine::Destroy()
 
 void Engine::Input()
 {
+	
 	while (window->pollEvent(evt))
 	{
 		switch (evt.type)
@@ -47,30 +49,13 @@ void Engine::Input()
 			window->close();
 			break;
 		}
-		/*
-			case Event::MouseButtonPressed:
-			{
-				window->setTitle("Click");
-				break;
-			}
-		*/
+	
 		case Event::KeyPressed: //키보드입력시 한번만입력을받음
 		{
 			switch (evt.key.code)
 			{
-			case Keyboard::A:
-			{
-				cout << "butten A\n";
-				break;
-			}
-			case Keyboard::S:
-			{
-				this->scenes.push(new EffectScene);
-				cout << "now scene:effectScene";
-				break;
-
-			}
-			case Keyboard::Q:
+		
+			case Keyboard::Escape:
 			{
 				scenes.top()->EndScene();
 				break;
@@ -84,16 +69,6 @@ void Engine::Input()
 		if (Keyboard::isKeyPressed(Keyboard::Escape)) //키보드입력시 지속적인 입력을받음 누른시간동안
 		{
 			window->close();
-		}
-
-
-		if (Mouse::isButtonPressed(Mouse::Left))
-		{
-			window->setTitle("Left clock");
-		}
-		if (Mouse::isButtonPressed(Mouse::Right))
-		{
-			window->setTitle("Right clock");
 		}
 		else
 		{
@@ -122,7 +97,8 @@ void Engine::Update()
 	}
 	else
 	{
-		window->close();
+
+		this->scenes.push(new LoginScene(&scenes, window));
 	}
 }
 
