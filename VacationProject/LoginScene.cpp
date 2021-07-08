@@ -21,7 +21,7 @@ LoginScene::~LoginScene()
 
 void LoginScene::Init()
 {
-	
+		vObjects.push_back(new login);
 	
 		switch (scene_event.type)
 		{
@@ -35,6 +35,7 @@ void LoginScene::Init()
 			case Keyboard::A:
 			{
 				scenes->push(new CharacterScene(scenes, window));
+				cout << "now Character Scene";
 				break;
 			}
 

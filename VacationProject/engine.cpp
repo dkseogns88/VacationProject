@@ -83,10 +83,11 @@ void Engine::Update()
 	deltaTime = timer.getElapsedTime().asSeconds();
 	timer.restart();
 	Input();
+	
 	if (!scenes.empty()) //씬이 비어있지않을때
 	{
 		scenes.top()->Update(deltaTime);
-
+		
 		if (this->scenes.top()->GetQuit())
 		{
 			//현재 실행중인 씬 종료
@@ -94,11 +95,12 @@ void Engine::Update()
 			this->scenes.pop();
 			cout << "Pop scene\n";
 		}
+		
 	}
 	else
 	{
-
-		this->scenes.push(new LoginScene(&scenes, window));
+		
+		window->close();
 	}
 }
 

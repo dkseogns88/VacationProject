@@ -19,7 +19,7 @@ Scene::~Scene()
 
 void Scene::Init()
 {
-	vObjects.push_back(new login);
+	
 	
 }
 bool Scene::GetQuit() const
