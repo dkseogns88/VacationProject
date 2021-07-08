@@ -49,12 +49,10 @@ void Engine::Input()
 			window->close();
 			break;
 		}
-	
 		case Event::KeyPressed: //키보드입력시 한번만입력을받음
 		{
 			switch (evt.key.code)
 			{
-		
 			case Keyboard::Escape:
 			{
 				scenes.top()->EndScene();
@@ -65,7 +63,6 @@ void Engine::Input()
 			break;
 		}
 		}
-
 		if (Keyboard::isKeyPressed(Keyboard::Escape)) //키보드입력시 지속적인 입력을받음 누른시간동안
 		{
 			window->close();
@@ -74,7 +71,6 @@ void Engine::Input()
 		{
 			window->setTitle("game");
 		}
-
 	}
 }
 
@@ -87,7 +83,6 @@ void Engine::Update()
 	if (!scenes.empty()) //씬이 비어있지않을때
 	{
 		scenes.top()->Update(deltaTime);
-		
 		if (this->scenes.top()->GetQuit())
 		{
 			//현재 실행중인 씬 종료
@@ -95,11 +90,9 @@ void Engine::Update()
 			this->scenes.pop();
 			cout << "Pop scene\n";
 		}
-		
 	}
 	else
 	{
-		
 		window->close();
 	}
 }

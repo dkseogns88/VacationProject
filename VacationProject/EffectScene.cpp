@@ -13,12 +13,12 @@ EffectScene::EffectScene(stack<Scene*>* scenes, RenderWindow* window) :Scene(sce
 
 EffectScene::~EffectScene()
 {
+
 }
 
 void EffectScene::Init()
 {
 	vObjects.push_back(new attackeffect);
-	
 }
 
 void EffectScene::Update(const float& deltaTime)

@@ -9,7 +9,7 @@ Scene::Scene()
 }
 
 Scene::Scene(stack<Scene*>* scenes,RenderWindow* window)
-	:scenes(scenes)
+	:scenes(scenes),window(window)
 {
 	Init();
 }
@@ -34,7 +34,6 @@ void Scene::EndScene()
 
 void Scene::Update(const float& deltaTime)
 {
-	
 	for (auto& obj : vObjects)
 	{
 		obj->Update(deltaTime);
