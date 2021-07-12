@@ -25,7 +25,7 @@ void Character::Init()
 		this->vAnimation.push_back(tx);
 	}
 
-	setPosition(Vector2f(400.f, 50.f));
+	setPosition(Vector2f(400.f, 370.f));
 	setScale(Vector2f(0.6, 0.6));
 }
 

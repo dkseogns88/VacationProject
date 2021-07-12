@@ -64,6 +64,9 @@
     <Filter Include="소스 파일\04.BackGround\Stage1">
       <UniqueIdentifier>{4126dd41-6145-4464-b180-3bd06f00696e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\03.object\03.MapObject">
+      <UniqueIdentifier>{411e4941-d91b-4876-aa98-0a573baec249}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -111,6 +114,9 @@
     <ClCompile Include="Stage1.cpp">
       <Filter>소스 파일\04.BackGround\Stage1</Filter>
     </ClCompile>
+    <ClCompile Include="Stage1Map.cpp">
+      <Filter>소스 파일\03.object\03.MapObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -157,6 +163,9 @@
     </ClInclude>
     <ClInclude Include="Stage1.h">
       <Filter>소스 파일\04.BackGround\Stage1</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage1Map.h">
+      <Filter>소스 파일\03.object\03.MapObject</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -27,7 +27,7 @@ void login::Init()
 	
 	this->setOrigin(tx->getSize().x/4.f , tx->getSize().y/4.f);
 	setPosition(Vector2f(90.f, 120.f));
-	
+	setScale(Vector2f(1.0, 1.2));
 
 }
 

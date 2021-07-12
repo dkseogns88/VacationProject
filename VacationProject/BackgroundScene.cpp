@@ -1,6 +1,7 @@
 #include "BackgroundScene.h"
 #include "Stage1.h"
 #include "Character.h"
+#include "Stage1Map.h"
 sf::Music backmusic;
 BackgroundScene::BackgroundScene()
 {
@@ -30,6 +31,7 @@ void BackgroundScene::Update(const float& deltaTime)
 	if (Keyboard::isKeyPressed(Keyboard::S))
 	{
 		vObjects.push_back(new Character);
+		vObjects.push_back(new Stage1Map);
 	}
 	
 	
