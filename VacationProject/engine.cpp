@@ -16,12 +16,15 @@ void Engine::Init()
 {
 	//현재 window변수는 포인터로 존재
 	this->window = new RenderWindow(VideoMode(500, 500), "Window");// 엔진의윈도우
+	
 	//window.set뭐시기 기능 잘활용할것
 	window->setMouseCursorVisible(true);
 	Image icon;
 	icon.loadFromFile("Texture/icon.png");
 	window->setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
-	this->scenes.push(new LoginScene(&scenes,window));
+	
+	soundEffect->AddEffectSound("Sound/buttonclick.wav", "Click");
+	this->scenes.push(new LoginScene(&scenes,window,soundEffect));
 	
 	
 	
@@ -33,7 +36,7 @@ void Engine::Destroy()
 	{
 		delete window;
 	}
-	
+	soundEffect->Destroy();
 }
 
 

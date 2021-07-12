@@ -12,7 +12,7 @@ LoginScene::LoginScene()
 	Init();
 }
 
-LoginScene::LoginScene(stack<Scene*>* scenes, RenderWindow* window):Scene(scenes,window)
+LoginScene::LoginScene(stack<Scene*>* scenes, RenderWindow* window, SoundEffect* soundEffect):Scene(scenes,window,soundEffect)
 {
 	Init();
 }
@@ -30,17 +30,31 @@ void LoginScene::Init()
 			music.play();
 			
 		}
+
+		
 }
 
 void LoginScene::Update(const float& deltaTime)
 {
+	while (window->pollEvent(scene_event))
+	{
+		switch (scene_event.type)
+		{
+		case Event::MouseButtonPressed: 
+		{
+			soundEffect->EffectPlay("Click");
+			break;
+		}
+		}
+	}
 	if (Keyboard::isKeyPressed(Keyboard::A))
 	{
 		music.stop();
-		scenes->push(new BackgroundScene(scenes,window));
+		scenes->push(new BackgroundScene(scenes,window,soundEffect));
 	
 		
 	}
+	
 	Scene::Update(deltaTime);
 }
 

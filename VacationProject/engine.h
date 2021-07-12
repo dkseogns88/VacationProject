@@ -1,4 +1,5 @@
 #pragma once
+#include "SoundEffect.h"
 #include "framework.h"
 //전방선언  :헤더파일 꼬임방지
 class Scene;
@@ -23,7 +24,7 @@ private:
 
 	RenderWindow* window = nullptr;
 	Event evt;
-
+	SoundEffect* soundEffect = nullptr;
 	Clock timer;
 	float deltaTime = 0.f;
 

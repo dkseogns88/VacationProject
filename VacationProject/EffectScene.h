@@ -5,7 +5,7 @@ class EffectScene : public Scene
 {
 public:
 	EffectScene();
-	EffectScene(stack<Scene*>* scenes, RenderWindow* window);
+	EffectScene(stack<Scene*>* scenes, RenderWindow* window,SoundEffect* soundEffect);
 	virtual ~EffectScene();
 
 private:

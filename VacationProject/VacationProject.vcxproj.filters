@@ -67,6 +67,9 @@
     <Filter Include="소스 파일\03.object\03.MapObject">
       <UniqueIdentifier>{411e4941-d91b-4876-aa98-0a573baec249}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\04.BackGround\Sound">
+      <UniqueIdentifier>{5d586316-d69e-4c45-b628-ae98effdd38b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -117,6 +120,9 @@
     <ClCompile Include="Stage1Map.cpp">
       <Filter>소스 파일\03.object\03.MapObject</Filter>
     </ClCompile>
+    <ClCompile Include="SoundEffect.cpp">
+      <Filter>소스 파일\04.BackGround\Sound</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -166,6 +172,9 @@
     </ClInclude>
     <ClInclude Include="Stage1Map.h">
       <Filter>소스 파일\03.object\03.MapObject</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundEffect.h">
+      <Filter>소스 파일\04.BackGround\Sound</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -8,7 +8,7 @@ class LoginScene : public Scene
 {
 public:
 	LoginScene();
-	LoginScene(stack<Scene*>* scenes, RenderWindow* window);
+	LoginScene(stack<Scene*>* scenes, RenderWindow* window, SoundEffect* soundEffect);
 	virtual ~LoginScene();
 
 private:

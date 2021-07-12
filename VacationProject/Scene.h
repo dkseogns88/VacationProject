@@ -1,5 +1,6 @@
 #pragma once
 #include "framework.h"
+#include "SoundEffect.h"
 class Object;
 
 class Scene
@@ -7,7 +8,7 @@ class Scene
 
 public:
 	Scene();
-	Scene(stack<Scene*>* scenes,RenderWindow* window);
+	Scene(stack<Scene*>* scenes,RenderWindow* window,SoundEffect* soundEffect);
 	virtual ~Scene();
 
 protected:
@@ -15,6 +16,7 @@ protected:
 
 	vector<Object*> vObjects;
 	stack<Scene*>* scenes = nullptr;
+	SoundEffect* soundEffect = nullptr;
 	RenderWindow* window = nullptr;
 	bool quit = false;
 

@@ -6,7 +6,7 @@ class BackgroundScene : public Scene
 {
 public:
 	BackgroundScene();
-	BackgroundScene(stack<Scene*>* scenes, RenderWindow* window);
+	BackgroundScene(stack<Scene*>* scenes, RenderWindow* window, SoundEffect* soundEffect);
 	virtual ~BackgroundScene();
 
 private:

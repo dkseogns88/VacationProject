@@ -8,8 +8,8 @@ Scene::Scene()
 	Init();
 }
 
-Scene::Scene(stack<Scene*>* scenes,RenderWindow* window)
-	:scenes(scenes),window(window)
+Scene::Scene(stack<Scene*>* scenes,RenderWindow* window, SoundEffect* soundEffect)
+	:scenes(scenes),window(window),soundEffect(soundEffect)
 {
 	Init();
 }

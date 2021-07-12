@@ -8,7 +8,7 @@ BackgroundScene::BackgroundScene()
 	Init();
 }
 
-BackgroundScene::BackgroundScene(stack<Scene*>* scenes, RenderWindow* window)
+BackgroundScene::BackgroundScene(stack<Scene*>* scenes, RenderWindow* window, SoundEffect* soundEffect)
 {
 	Init();
 }
