@@ -22,7 +22,7 @@ void Engine::Init()
 	Image icon;
 	icon.loadFromFile("Texture/icon.png");
 	window->setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
-	
+	soundEffect = new SoundEffect;
 	soundEffect->AddEffectSound("Sound/buttonclick.wav", "Click");
 	this->scenes.push(new LoginScene(&scenes,window,soundEffect));
 	

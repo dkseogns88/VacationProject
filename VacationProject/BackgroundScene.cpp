@@ -28,11 +28,11 @@ void BackgroundScene::Init()
 
 void BackgroundScene::Update(const float& deltaTime)
 {
-	if (Keyboard::isKeyPressed(Keyboard::S))
-	{
+	
+	
 		vObjects.push_back(new Character);
 		vObjects.push_back(new Stage1Map);
-	}
+	
 	
 	
 	Scene::Update(deltaTime);
