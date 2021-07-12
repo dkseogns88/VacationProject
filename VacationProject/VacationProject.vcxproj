@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClCompile Include="AnimationObject.cpp" />
     <ClCompile Include="attackeffect.cpp" />
+    <ClCompile Include="BackgroundScene.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="CharacterScene.cpp" />
     <ClCompile Include="Effect.cpp" />
@@ -155,10 +156,12 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Stage1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimationObject.h" />
     <ClInclude Include="attackeffect.h" />
+    <ClInclude Include="BackgroundScene.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="CharacterScene.h" />
     <ClInclude Include="Effect.h" />
@@ -170,6 +173,7 @@
     <ClInclude Include="LoginScene.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="Stage1.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

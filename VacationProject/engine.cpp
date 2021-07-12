@@ -24,6 +24,7 @@ void Engine::Init()
 	this->scenes.push(new LoginScene(&scenes,window));
 	
 	
+	
 }
 
 void Engine::Destroy()

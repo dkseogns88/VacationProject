@@ -2,7 +2,10 @@
 #include "login.h"
 #include "framework.h"
 #include "CharacterScene.h"
+#include "EffectScene.h"
+#include "BackgroundScene.h"
 
+sf::Music music;
 
 LoginScene::LoginScene()
 {
@@ -22,13 +25,21 @@ LoginScene::~LoginScene()
 void LoginScene::Init()
 {
 		vObjects.push_back(new login);
+		if (music.openFromFile("Sound/login.wav"))
+		{
+			music.play();
+			
+		}
 }
 
 void LoginScene::Update(const float& deltaTime)
 {
 	if (Keyboard::isKeyPressed(Keyboard::A))
 	{
-		scenes->push(new CharacterScene(scenes,window));
+		music.stop();
+		scenes->push(new BackgroundScene(scenes,window));
+	
+		
 	}
 	Scene::Update(deltaTime);
 }

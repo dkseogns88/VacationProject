@@ -55,6 +55,15 @@
     <Filter Include="소스 파일\02.Scene\EndingScene">
       <UniqueIdentifier>{29a35acd-e268-4fa7-9621-685485ef75bb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\02.Scene\BackgroundScene">
+      <UniqueIdentifier>{4c334765-1145-4693-aad2-e1c3a254ddf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.BackGround">
+      <UniqueIdentifier>{dcfe9039-eaee-4c4d-b18e-4399aa3452cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.BackGround\Stage1">
+      <UniqueIdentifier>{4126dd41-6145-4464-b180-3bd06f00696e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -96,6 +105,12 @@
     <ClCompile Include="LoginScene.cpp">
       <Filter>소스 파일\02.Scene\loginScene</Filter>
     </ClCompile>
+    <ClCompile Include="BackgroundScene.cpp">
+      <Filter>소스 파일\02.Scene\BackgroundScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage1.cpp">
+      <Filter>소스 파일\04.BackGround\Stage1</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -136,6 +151,12 @@
     </ClInclude>
     <ClInclude Include="LoginScene.h">
       <Filter>소스 파일\02.Scene\loginScene</Filter>
+    </ClInclude>
+    <ClInclude Include="BackgroundScene.h">
+      <Filter>소스 파일\02.Scene\BackgroundScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage1.h">
+      <Filter>소스 파일\04.BackGround\Stage1</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
