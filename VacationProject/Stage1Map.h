@@ -11,7 +11,7 @@ public:
 
 private:
 	virtual void Init();
-
+	RenderWindow window;
 public:
 	virtual void Update(const float& deltaTime);
 	virtual void Destroy();

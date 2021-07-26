@@ -4,7 +4,7 @@
 #include "CharacterScene.h"
 #include "EffectScene.h"
 #include "BackgroundScene.h"
-
+#include "Button.h"
 sf::Music music;
 
 LoginScene::LoginScene()
@@ -24,42 +24,40 @@ LoginScene::~LoginScene()
 
 void LoginScene::Init()
 {
+	
 		vObjects.push_back(new login);
 		if (music.openFromFile("Sound/login.wav"))
 		{
 			music.play();
 			
 		}
-
+		bts["Button!"] = new Button("Texture/login/loginbutton2.png", "Texture/login/loginbutton2.png", { 450.f,350.f });
+		
 		
 }
 
-void LoginScene::Update(const float& deltaTime)
+void LoginScene::Update(const float& deltaTime,const Vector2f& mousePosition, stack<Scene*>* scenes, RenderWindow* window, SoundEffect* soundEffect)
 {
-	while (window->pollEvent(scene_event))
+	for (auto& b1 : bts)
 	{
-		switch (scene_event.type)
-		{
-		case Event::MouseButtonPressed: 
-		{
-			soundEffect->EffectPlay("Click");
-			break;
-		}
-		}
+		b1.second->Update(mousePosition,scenes,window,soundEffect);
 	}
-	if (Keyboard::isKeyPressed(Keyboard::A))
-	{
-		music.stop();
-		scenes->push(new BackgroundScene(scenes,window,soundEffect));
+
 	
-		
-	}
 	
 	Scene::Update(deltaTime);
 }
 
 void LoginScene::Render(RenderWindow* window)
 {
+
 	Scene::Render(window);
+	for (auto& b1 : bts)
+	{
+		b1.second->Render(window);
+	}
+
+	
+	
 }
 

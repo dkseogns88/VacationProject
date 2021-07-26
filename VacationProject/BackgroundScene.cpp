@@ -19,19 +19,25 @@ BackgroundScene::~BackgroundScene()
 
 void BackgroundScene::Init()
 {
-    vObjects.push_back(new Stage1);
 	if (backmusic.openFromFile("Sound/henesys.wav"))
 	{
 		backmusic.play();
 	}
+	/*삭제했던 공격이펙트 추가하기*/
+	vObjects.push_back(new Stage1);
+	vObjects.push_back(new Character);
+    
+	
+	vObjects.push_back(new Stage1Map);
+	
+	
 }
 
 void BackgroundScene::Update(const float& deltaTime)
 {
 	
 	
-		vObjects.push_back(new Character);
-		vObjects.push_back(new Stage1Map);
+	
 	
 	
 	

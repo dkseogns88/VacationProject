@@ -3,6 +3,7 @@
 #include "EffectScene.h"
 #include "CharacterScene.h"
 #include "LoginScene.h"
+
 Engine::Engine()
 {
 	Init();

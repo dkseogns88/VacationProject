@@ -22,7 +22,11 @@ void CharacterScene::Init()
 
 void CharacterScene::Update(const float& deltaTime)
 {
-	Scene::Update(deltaTime);
+	
+		
+
+		Scene::Update(deltaTime);
+	
 }
 
 void CharacterScene::Render(RenderWindow* window)

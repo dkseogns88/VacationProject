@@ -1,2 +1,8 @@
 ﻿  BackgroundScene.cpp
+  Button.cpp
+  EndingScene.cpp
+  MonsterObject.cpp
+  Portal.cpp
+  Stage1Map.cpp
+  코드를 생성하고 있습니다...
   VacationProject.vcxproj -> C:\Users\대훈\Desktop\VacationProject\VacationProject\Debug\VacationProject.exe

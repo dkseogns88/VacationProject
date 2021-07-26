@@ -26,7 +26,7 @@ private:
 	Event evt;
 	SoundEffect* soundEffect = nullptr;
 	Clock timer;
-	float deltaTime = 0.f;
+	float deltaTime = 0.3f;
 
 	stack<Scene*> scenes;
 	
